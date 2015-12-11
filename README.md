@@ -28,6 +28,16 @@ gulp.task('css', function () {
         .pipe(gulp.dest('./dest'));
 });
 ```
+Then import the _assemble-tables.css file from your css file.
+```css
+@import '../node_modules/assemble-base/base';
+
+/*
+Override variables here before the Assemble Components are loaded.
+*/
+
+@import '../node_modules/assemble-tables/assemble-tables';
+```
 
 ### HTML
 ```html
