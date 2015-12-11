@@ -36,9 +36,9 @@ td{
     padding: $table-padding;
     text-align: left;
 
-    /*@include media-query(palm){
+    @media map(constants, mediaQueries, palm){
         padding: $table-padding-palm;
-    }*/
+    }
 }
 
 
@@ -142,9 +142,9 @@ td{
         td{
             display: block;
 
-            /*@include media-query(palm){
+            @media map(constants, mediaQueries, palm){
                 margin-top: -1px;
-            }*/
+            }
 
             &:before{
                 display: inline-block;
@@ -152,21 +152,21 @@ td{
                 font-weight: bold;
                 content: attr(data-th) ': '; /* who knew you could do this? The internet, that's who. */
 
-                /*@include media-query(lap-and-up){
+                @media map(constants, mediaQueries, lapAndUp){
                     display: none;
-                }*/
+                }
             }
         }
 
         th,
         td{
-            /*@include media-query(palm){
+            @media map(constants, mediaQueries, palm){
                 text-align: left;
             }
 
-            @include media-query(lap-and-up){
-                display: table-cell;
-            }*/
+            @media map(constants, mediaQueries, lapAndUp){
+                display: none;
+            }
         }
     }
 }
@@ -195,9 +195,9 @@ td{
         color: inherit;
         text-decoration: none;
 
-        /*@include media-query(palm) {
+        @media map(constants, mediaQueries, palm){
             padding: $table-padding-palm;
-        }*/
+        }
     }
 
     .table--row-hover tr:hover {
