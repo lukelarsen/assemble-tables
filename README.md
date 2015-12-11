@@ -15,12 +15,12 @@ npm install assemble-tables --save-dev
 ```js
 var gulp = require('gulp');
 var postcss = require('gulp-postcss');
-var assembleCore = require('assemble-core');
+var assembleBase = require('assemble-base');
 var assembleTables = require('assemble-tables');
 
 gulp.task('css', function () {
     var processors = [
-        assembleCore,
+        assembleBase,
         assembleTables
     ];
     return gulp.src('./src/*.css')
