@@ -35,8 +35,11 @@ th,
 td{
     padding: $table-padding;
     text-align: left;
+}
 
-    @media map(constants, mediaQueries, palm){
+@media map(constants, mediaQueries, palm){
+    th,
+    td{
         padding: $table-padding-palm;
     }
 }
@@ -133,40 +136,40 @@ td{
  */
 
 @if $table--responsive == true{
-    .table--responsive{
+    .table--responsive th{
+        display: none; /* for accessibility, use a visually hidden method here instead! Thanks, reddit! */
+    }
 
-        th{
-            display: none; /* for accessibility, use a visually hidden method here instead! Thanks, reddit! */
+    .table--responsive td{
+        display: block;
+    }
+
+    .table--responsive td:before{
+        display: inline-block;
+        margin-right: 15px;
+        font-weight: bold;
+        content: attr(data-th) ': '; /* who knew you could do this? The internet, that's who. */
+    }
+
+    @media map(constants, mediaQueries, lapAndUp){
+        .table--responsive td:before{
+            display: none;
         }
 
-        td{
-            display: block;
+        .table--responsive th,
+        .table--responsive td{
+            display: none;
+        }
+    }
 
-            @media map(constants, mediaQueries, palm){
-                margin-top: -1px;
-            }
-
-            &:before{
-                display: inline-block;
-                margin-right: 15px;
-                font-weight: bold;
-                content: attr(data-th) ': '; /* who knew you could do this? The internet, that's who. */
-
-                @media map(constants, mediaQueries, lapAndUp){
-                    display: none;
-                }
-            }
+    @media map(constants, mediaQueries, palm){
+        .table--responsive td{
+            margin-top: -1px;
         }
 
-        th,
-        td{
-            @media map(constants, mediaQueries, palm){
-                text-align: left;
-            }
-
-            @media map(constants, mediaQueries, lapAndUp){
-                display: none;
-            }
+        .table--responsive th,
+        .table--responsive td{
+            text-align: left;
         }
     }
 }
@@ -184,27 +187,29 @@ td{
         transition: background-color 0.1s ease-in-out;
     }
 
-    .table--row-hover tr:hover {
+    .table--row-hover tr:hover{
         background-color: $table-row-hover-color !important;
         cursor: pointer;
     }
 
-    .table--row-hover tr {
+    .table--row-hover tr{
         display: block;
         padding: $table-padding;
         color: inherit;
         text-decoration: none;
+    }
 
-        @media map(constants, mediaQueries, palm){
+    @media map(constants, mediaQueries, palm){
+        .table--row-hover tr{
             padding: $table-padding-palm;
         }
     }
 
-    .table--row-hover tr:hover {
+    .table--row-hover tr:hover{
         color: inherit;
     }
 
-    .table--row-hover thead tr:hover {
+    .table--row-hover thead tr:hover{
         background-color: inherit !important;
         cursor: default;
     }
