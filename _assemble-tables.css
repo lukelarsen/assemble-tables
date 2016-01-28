@@ -193,7 +193,6 @@ td{
     }
 
     .table--row-hover tr{
-        display: block;
         padding: $table-padding;
         color: inherit;
         text-decoration: none;
