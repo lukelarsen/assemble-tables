@@ -80,6 +80,7 @@ td{
     .table--bordered td{
         border: $table-border-size solid $table-border-color;
     }
+
     .table--bordered th:empty,
     .table--bordered td:empty{
         border: 0;
@@ -136,7 +137,7 @@ td{
  */
 
 @if $table--responsive == true{
-    @media table--responsive-breakpoint{
+    @media $table--responsive-breakpoint{
         .table--responsive td:before{
             display: inline-block;
             margin-right: 15px;
@@ -171,8 +172,8 @@ td{
     !ROW HOVER
 \*------------------------------------*/
 
-@if $table--row-hover == true {
-    .table--row-hover tr {
+@if $table--row-hover == true{
+    .table--row-hover tr{
         transition: background-color 0.1s ease-in-out;
     }
 
