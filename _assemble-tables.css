@@ -136,33 +136,22 @@ td{
  */
 
 @if $table--responsive == true{
-    .table--responsive th{
-        display: none; /* for accessibility, use a visually hidden method here instead! Thanks, reddit! */
-    }
-
-    .table--responsive td{
-        display: block;
-    }
-
-    .table--responsive td:before{
-        display: inline-block;
-        margin-right: 15px;
-        font-weight: bold;
-        content: attr(data-th) ': '; /* who knew you could do this? The internet, that's who. */
-    }
-
-    @media map(constants, mediaQueries, lapAndUp){
+    @media table--responsive-breakpoint{
         .table--responsive td:before{
+            display: inline-block;
+            margin-right: 15px;
+            font-weight: bold;
+            content: attr(data-th) ': '; /* who knew you could do this? The internet, that's who. */
+        }
+
+        .table--responsive th{
             display: none;
         }
 
-        .table--responsive th,
         .table--responsive td{
-            display: none;
+            display: block;
         }
-    }
 
-    @media map(constants, mediaQueries, palm){
         .table--responsive td{
             margin-top: -1px;
         }

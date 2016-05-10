@@ -347,7 +347,7 @@ Usage
 ```
 
 ##### $table--responsive
-- Turn on/off responsive tables for your application. If set to true you can use the class .nav--responsive.
+- Turn on/off responsive tables for your application. If set to true you can use the class .table--responsive.
 - Default: false;
 - Type: Boolean
 ```css
