@@ -168,6 +168,7 @@ $table-sort-right-pos: 14px;
 - Type: Number
 ```css
 $table-sort-top-pos: 14px;
+```
 
 ##### $table-sort-desc-bg-color
 - Set what color you'd like the active desc table header to be.
@@ -175,6 +176,7 @@ $table-sort-top-pos: 14px;
 - Type: Color
 ```css
 $table-sort-desc-bg-color: gray;
+```
 
 ##### $table-sort-asc-bg-color
 - Set what color you'd like the active asc table header to be.
@@ -182,6 +184,7 @@ $table-sort-desc-bg-color: gray;
 - Type: Color
 ```css
 $table-sort-asc-bg-color: gray;
+```
 
 ### Modifier Variables
 
