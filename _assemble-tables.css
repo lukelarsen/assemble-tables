@@ -11,6 +11,7 @@
  *  NUMERICAL
  *  RESPONSIVE TABLE
  *  ROW HOVER
+ *  SORT
 */
 
 /**
@@ -201,5 +202,32 @@ td{
     .table--row-hover thead tr:hover{
         background-color: inherit !important;
         cursor: default;
+    }
+}
+
+
+
+
+
+/*------------------------------------*\
+    !SORT
+\*------------------------------------*/
+
+@if $table--sort == true{
+    .table--sort thead th{
+        background-image: $table-sort-none-image;
+        background-repeat: no-repeat;
+        background-position: right $table-sort-right-pos top $table-sort-top-pos;
+        cursor: pointer;
+    }
+
+    .table--sort thead th.table--sort__desc{
+        background-color: $table-sort-desc-bg-color;
+        background-image: $table-sort-desc-image;
+    }
+
+    .table--sort thead th.table--sort__asc{
+        background-color: $table-sort-asc-bg-color;
+        background-image: $table-sort-asc-image;
     }
 }

@@ -1,5 +1,6 @@
 [Assemble]:                http://assemblecss.com
 [Assemble Base]:           https://github.com/lukelarsen/assemble-base
+[Stupid Table]:            https://github.com/joequery/Stupid-Table-Plugin/tree/dd20279ae24f29ea07cba8c035be685b6e9dcf50
 
 # Assemble Tables
 Assemble Tables is a component of the [Assemble] CSS Framework. It will give you a solid base for tables in your project. It has some default styles that can easily be overridden so you can add your own look.
@@ -128,6 +129,59 @@ $table-border-color: #999;
 ```css
 $table-border-size: 3px;
 ```
+
+##### $table-sort-none-image
+- Set table sorting none image.
+- Default: url('../images/table-sort-none.svg');
+- Type: String
+```css
+$table-sort-none-image: svg-load('table-sort-none.svg');
+```
+
+##### $table-sort-desc-image
+- Set table sorting desc image.
+- Default: url('../images/table-sort-desc.svg');
+- Type: String
+```css
+$table-sort-none-image: svg-load('table-sort-desc.svg');
+```
+
+##### $table-sort-none-asc
+- Set table sorting asc image.
+- Default: url('../images/table-sort-asc.svg');
+- Type: String
+```css
+$table-sort-none-image: svg-load('table-sort-asc.svg');
+```
+
+##### $table-sort-right-pos
+- Set how far from the right you want the sort icon/image to be.
+- Default: 12px;
+- Type: Number
+```css
+$table-sort-right-pos: 14px;
+```
+
+##### $table-sort-top-pos
+- Set how far from the top you want the sort icon/image to be.
+- Default: 12px;
+- Type: Number
+```css
+$table-sort-top-pos: 14px;
+
+##### $table-sort-desc-bg-color
+- Set what color you'd like the active desc table header to be.
+- Default: black;
+- Type: Color
+```css
+$table-sort-desc-bg-color: gray;
+
+##### $table-sort-asc-bg-color
+- Set what color you'd like the active asc table header to be.
+- Default: black;
+- Type: Color
+```css
+$table-sort-asc-bg-color: gray;
 
 ### Modifier Variables
 
@@ -459,6 +513,60 @@ Usage
             <td data-th="Ipsum">Dolor</td>
             <td data-th="Dolor">12.117</td>
             <td data-th="Sit">Lorem</td>
+        </tr>
+    </tbody>
+</table>
+```
+
+##### Table Sorting
+You can add some UI to the table headers if you are going to enable sorting of the tables. Note that Assemble doesn't come with any javascript to do the actual sorting. You can look at [Stupid Table] for a jQuery solution.
+- Turn on/off tables that can sort their contents
+- Default: false;
+- Type: Boolean
+```css
+$table--sort: true;
+```
+
+Usage
+```html
+<table class="table  table--sort">
+    <colgroup>
+        <col class="t-15">
+        <col>
+        <col>
+    </colgroup>
+    <thead>
+        <tr>
+            <th>Lorem</th>
+            <th class="table--sort__desc">Ipsum</th>
+            <th>Sit</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Sit</td>
+            <td>Dolor</td>
+            <td>Lorem</td>
+        </tr>
+        <tr>
+            <td>Sit</td>
+            <td>Dolor</td>
+            <td>Lorem</td>
+        </tr>
+        <tr>
+            <td>Sit</td>
+            <td>Dolor</td>
+            <td>Lorem</td>
+        </tr>
+        <tr>
+            <td>Sit</td>
+            <td>Dolor</td>
+            <td>Lorem</td>
+        </tr>
+        <tr>
+            <td>Sit</td>
+            <td>Dolor</td>
+            <td>Lorem</td>
         </tr>
     </tbody>
 </table>
