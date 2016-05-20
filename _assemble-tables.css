@@ -219,6 +219,7 @@ td{
         background-repeat: no-repeat;
         background-position: right $table-sort-right-pos top $table-sort-top-pos;
         cursor: pointer;
+        transition: background-color 0.3s ease-in-out;
     }
 
     .table--sort thead th.table--sort__desc{
