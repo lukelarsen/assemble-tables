@@ -36,6 +36,7 @@ th,
 td{
     padding: $table-padding;
     text-align: left;
+    vertical-align: top;
 }
 
 @media map(constants, mediaQueries, palm){
