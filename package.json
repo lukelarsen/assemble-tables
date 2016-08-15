@@ -1,6 +1,6 @@
 {
   "name": "assemble-tables",
-  "version": "1.1.3",
+  "version": "1.1.4",
   "description": "Tables for the Assemble CSS Framework.",
   "main": "assemble-tables.css",
   "scripts": {
