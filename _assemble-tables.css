@@ -176,7 +176,7 @@ td{
 
 @if $table--row-hover == true{
     .table--row-hover tr{
-        transition: background-color 0.1s ease-in-out;
+        transition: background-color 0.3s ease-in-out;
     }
 
     .table--row-hover tr:hover{
